@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Bradford in World War 1</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+            color: #333;
+            background: #f9f9f9;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin: 0;
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        /* Header */
+        header {
+            background: #1d4634;
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .logo {
+            width: 150px;
+            height: auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        nav ul li a:hover {
+            background: #3a763a;
+            transform: scale(1.05);
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background: white;
+            border-radius: 20px;
+            padding: 5px 10px;
+        }
+
+        .search-bar input {
+            border: none;
+            padding: 8px;
+            outline: none;
+            border-radius: 15px;
+        }
+
+        /* Map Section */
+        .map-section {
+            background-color: #f9f9f9;
+            /* Same as the page background */
+            padding-top: 120px;
+            /* To adjust for the fixed header */
+            margin-bottom: 20px;
+            /* Add some space before the next section */
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: #f9f9f9;
+            /* Same as the map background */
+            padding: 80px 0;
+            text-align: center;
+            color: #333;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .contact-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: #3a763a;
+            font-weight: bold;
+        }
+
+        .contact-description {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #555;
+            line-height: 1.6;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 0 auto;
+            max-width: 600px;
+            width: 100%;
+            /* Ensure the form container uses the full width */
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form button {
+            width: 100%;
+            /* Make all form elements 100% width */
+            box-sizing: border-box;
+            /* Include padding and border in total width calculation */
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            padding: 12px 20px;
+            background-color: #4a6b5c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+
+
+
+
+        .contact-form button:hover {
+            background-color: #6b8e23;
+            transform: scale(1.05);
+        }
+
+        .error-message {
+            color: red;
+            font-size: 1rem;
+            display: none;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1d4634;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <img src="BradfordWW1.png" alt="Bradford WW1 Logo" class="logo">
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="peoplesearch.html">People Search</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2356.8887442133187!2d-1.7686439227605082!3d53.791467672421845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487be6b5896a3c2b%3A0x3e1c202b0be48ed2!2sUniversity%20of%20Bradford!5e0!3m2!1sen!2suk!4v1743983539566!5m2!1sen!2suk"
+            width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p class="contact-description">
+                If you have any questions, feedback, or need assistance, feel free to reach out to us. We would love to
+                hear from you!
+            </p>
+
+            <form class="contact-form" onsubmit="return validateForm()">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                <div class="error-message" id="error-message">Please fill out this field.</div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Bradford in World War 1 | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        function validateForm() {
+            var message = document.getElementById("message").value;
+            var errorMessage = document.getElementById("error-message");
+
+            if (message.trim() === "") {
+                errorMessage.style.display = "block";
+                return false;
+            } else {
+                errorMessage.style.display = "none";
+                return true;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

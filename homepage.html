@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bradford in World War 1</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+            color: #333;
+            background: #f9f9f9;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            margin: 0;
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        /* Sticky Navigation */
+        header {
+            background: #1d4634;
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .logo {
+            width: 150px;
+            height: auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        nav ul li a:hover {
+            background: #3a763a;
+            transform: scale(1.05);
+        }
+
+        /* Search Bar */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background: white;
+            border-radius: 20px;
+            padding: 5px 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .search-bar input {
+            border: none;
+            padding: 8px;
+            outline: none;
+            border-radius: 15px;
+        }
+
+       /* Hero Section with Map */
+.hero {
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+    margin-top: 80px; /* Adjust as needed */
+    display: flex;
+    align-items: flex-start; /* Change from center to top */
+    justify-content: center;
+    background: #ddd;
+    animation: slideIn 2s ease-out;
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+.hero img {
+    width: 100%;
+    height: auto; /* Adjust height to maintain aspect ratio */
+    object-fit: cover;
+    object-position: center; /* Adjust to keep the image centered */
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.hero img:hover {
+    transform: scale(1.02);
+}
+
+
+        /* Fade-in Effect for Sections */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Animation for Hero */
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 80px 0;
+            background-color: #f4f4f4;
+            text-align: center;
+            color: #333;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .about-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: #3a763a;
+            font-weight: bold;
+        }
+
+        .about-description {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #555;
+            line-height: 1.6;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about-content {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .about-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-item h3 {
+            font-size: 1.6rem;
+            color: #4a6b5c;
+            margin-bottom: 10px;
+        }
+
+        .about-item p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #4a6b5c;
+            color: #fff;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background 0.3s ease, transform 0.3s ease;
+            margin-top: 30px;
+        }
+
+        .cta-button:hover {
+            background-color: #6b8e23;
+            transform: scale(1.1);
+        }
+
+        /* Grid Layout */
+        .panels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .panel {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .panel:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .panel img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c4c3b;
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                height: 50vh;
+            }
+
+            .hero img {
+                height: auto;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .about-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .panel {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <img src="BradfordWW1.png" alt="Bradford WW1 Logo" class="logo">
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="peoplesearch.html">People Search</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    
+
+    <!-- Hero Section with Map -->
+    <section class="hero">
+        <a href="/Users/sulaimansaeed/Desktop/homepage2.0/map.jpg" target="_blank">
+            <img src="/Users/sulaimansaeed/Desktop/homepage2.0/map.jpg" alt="WW1 Bradford Map">
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <h2>Bradford in World War 1</h2>
+            <p class="about-description">Discover the rich history of Bradford during World War 1 and learn about the brave men and women who served in the war. This section allows you to search for individuals from Bradford who contributed to the war effort, with details constantly being updated and preserved for future generations.</p>
+            
+            <div class="about-content">
+                <div class="about-item">
+                    <h3>Search for Heroes</h3>
+                    <p>Explore detailed records of individuals from Bradford who served in World War 1. Whether they were soldiers, nurses, or civilians, their stories are preserved here.</p>
+                </div>
+                <div class="about-item">
+                    <h3>Research in Progress</h3>
+                    <p>Our team is constantly researching and adding new material to the databases, ensuring that the memory of Bradford's contribution to World War 1 is kept alive for future generations.</p>
+                </div>
+                <div class="about-item">
+                    <h3>Preserving History</h3>
+                    <p>As new data becomes available, we update our records to provide an accurate and comprehensive history of Bradford’s involvement in the war, helping to honor those who served.</p>
+                </div>
+            </div>
+
+            <a href="peoplesearch.html" class="cta-button">Start Your Search</a>
+        </div>
+    </section>
+
+    <!-- Commemorative Panels Section -->
+    <section class="panels-section">
+        <div class="container">
+            <h2>Bradford's Databases</h2>
+            <div class="panels-grid">
+                <div class="panel">
+                    <img src="2.jpg" alt="Bradford Soldiers">
+                    <h3>Bradford Soldiers Biography</h3>
+                    <p>Explore the biographies of the brave soldiers from Bradford who fought in World War 1, and discover their heroic contributions to the war effort.</p>
+                </div>
+                <div class="panel">
+                    <img src="3.jpg" alt="Home Front Heroes">
+                    <h3>Bradford Great War Role of Honour</h3>
+                    <p>This role of honour lists those from Bradford who supported the war from home, working tirelessly behind the scenes to ensure victory.</p>
+                </div>
+                <div class="panel">
+                    <img src="1.jpg" alt="Historical Documents">
+                    <h3>Bradford Soldiers WW1 Database</h3>
+                    <p>An extensive database of records documenting the soldiers from Bradford who served in World War 1, complete with detailed personal histories and military service information.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Bradford in World War 1 | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
